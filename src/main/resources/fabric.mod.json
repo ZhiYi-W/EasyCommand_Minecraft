@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "easycommand",
+  "version": "${version}",
+  "name": "EasyCommand",
+  "description": "一款添加了生存常用命令的mod",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/easycommand/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "cn.zy2gc.easycommand.client.EasycommandClient"
+    ],
+    "main": [
+      "cn.zy2gc.easycommand.Easycommand"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
