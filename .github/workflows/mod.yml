@@ -38,7 +38,7 @@ jobs:                                             #在这里你就会实际告�
 
       - name: 构建
         run: ./gradlew clean build
-               - name: 发布（CurseForge/Modrinth/Github）
+               - name: 发布
                uses: Kir-Antipov/mc-publish@v3.2
                with:
                  curseforge-id: ZhiYi
