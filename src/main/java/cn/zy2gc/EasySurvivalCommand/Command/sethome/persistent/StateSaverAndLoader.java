@@ -17,7 +17,6 @@ public class StateSaverAndLoader extends PersistentState {
     }
 
 
-
     private static Type<StateSaverAndLoader> type = new Type<StateSaverAndLoader>(
             StateSaverAndLoader::new, // 若不存在 'StateSaverAndLoader' 则创建
             StateSaverAndLoader::createFromNbt, // 若存在 'StateSaverAndLoader' NBT, 则调用 'createFromNbt' 传入参数
