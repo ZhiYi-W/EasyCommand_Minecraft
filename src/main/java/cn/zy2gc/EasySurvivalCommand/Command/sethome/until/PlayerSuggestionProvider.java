@@ -1,6 +1,6 @@
-package cn.zy2gc.easycommand.Command.sethome.until;
+package cn.zy2gc.EasySurvivalCommand.Command.sethome.until;
 
-import cn.zy2gc.easycommand.Command.sethome.Dao.PlayerHomePosDao;
+import cn.zy2gc.EasySurvivalCommand.Command.sethome.Dao.PlayerHomePosDao;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.SuggestionProvider;

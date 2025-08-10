@@ -1,8 +1,8 @@
-package cn.zy2gc.easycommand.Command.sethome;
+package cn.zy2gc.EasySurvivalCommand.Command.sethome;
 
-import cn.zy2gc.easycommand.Command.sethome.Dao.PlayerHomePosDao;
-import cn.zy2gc.easycommand.Command.sethome.entity.Pos;
-import cn.zy2gc.easycommand.Command.sethome.until.PlayerSuggestionProvider;
+import cn.zy2gc.EasySurvivalCommand.Command.sethome.Dao.PlayerHomePosDao;
+import cn.zy2gc.EasySurvivalCommand.Command.sethome.entity.Pos;
+import cn.zy2gc.EasySurvivalCommand.Command.sethome.until.PlayerSuggestionProvider;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.server.MinecraftServer;

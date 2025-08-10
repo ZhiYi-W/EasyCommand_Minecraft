@@ -1,4 +1,4 @@
-package cn.zy2gc.easycommand.client;
+package cn.zy2gc.EasySurvivalCommand.client;
 
 import net.fabricmc.api.ClientModInitializer;
 

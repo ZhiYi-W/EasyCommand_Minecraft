@@ -1,4 +1,4 @@
-package cn.zy2gc.easycommand.Command.sethome.persistent;
+package cn.zy2gc.EasySurvivalCommand.Command.sethome.persistent;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
