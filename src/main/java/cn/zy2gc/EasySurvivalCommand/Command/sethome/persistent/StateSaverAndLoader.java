@@ -1,7 +1,6 @@
-package cn.zy2gc.easycommand.Command.sethome.persistent;
+package cn.zy2gc.EasySurvivalCommand.Command.sethome.persistent;
 
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.PersistentState;
 import net.minecraft.world.PersistentStateManager;
@@ -12,10 +11,12 @@ public class StateSaverAndLoader extends PersistentState {
     public String HomeMapString = "{}";
 
     @Override
-    public NbtCompound writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+    public NbtCompound writeNbt(NbtCompound nbt) {
         nbt.putString("home_list_string", HomeMapString);
         return nbt;
     }
+
+
 
     private static Type<StateSaverAndLoader> type = new Type<StateSaverAndLoader>(
             StateSaverAndLoader::new, // 若不存在 'StateSaverAndLoader' 则创建
@@ -23,7 +24,7 @@ public class StateSaverAndLoader extends PersistentState {
             null // 此处理论上应为 'DataFixTypes' 的枚举，但我们直接传递为空(null)也可以
     );
 
-    private static StateSaverAndLoader createFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup wrapperLookup) {
+    private static StateSaverAndLoader createFromNbt(NbtCompound tag) {
         StateSaverAndLoader state = new StateSaverAndLoader();
         state.HomeMapString = tag.getString("home_list_string");
         return state;
@@ -45,5 +46,4 @@ public class StateSaverAndLoader extends PersistentState {
 
         return state;
     }
-
 }

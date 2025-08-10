@@ -1,8 +1,8 @@
-package cn.zy2gc.easycommand.Command.sethome.Dao;
+package cn.zy2gc.EasySurvivalCommand.Command.sethome.Dao;
 
 
-import cn.zy2gc.easycommand.Command.sethome.entity.Pos;
-import cn.zy2gc.easycommand.Command.sethome.persistent.StateSaverAndLoader;
+import cn.zy2gc.EasySurvivalCommand.Command.sethome.entity.Pos;
+import cn.zy2gc.EasySurvivalCommand.Command.sethome.persistent.StateSaverAndLoader;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import net.minecraft.server.MinecraftServer;

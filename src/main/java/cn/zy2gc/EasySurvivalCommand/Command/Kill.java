@@ -1,4 +1,4 @@
-package cn.zy2gc.easycommand.Command;
+package cn.zy2gc.EasySurvivalCommand.Command;
 
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.server.MinecraftServer;

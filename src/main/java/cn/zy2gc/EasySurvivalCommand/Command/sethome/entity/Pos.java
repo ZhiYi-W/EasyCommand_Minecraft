@@ -1,4 +1,4 @@
-package cn.zy2gc.easycommand.Command.sethome.entity;
+package cn.zy2gc.EasySurvivalCommand.Command.sethome.entity;
 
 public class Pos {
 

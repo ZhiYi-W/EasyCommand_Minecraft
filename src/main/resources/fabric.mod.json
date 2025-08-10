@@ -11,10 +11,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "cn.zy2gc.easycommand.client.EasycommandClient"
+      "cn.zy2gc.EasySurvivalCommand.client.EasycommandClient"
     ],
     "main": [
-      "cn.zy2gc.easycommand.Easycommand"
+      "cn.zy2gc.EasySurvivalCommand.EasySurvivalCommand"
     ]
   },
   "depends": {
