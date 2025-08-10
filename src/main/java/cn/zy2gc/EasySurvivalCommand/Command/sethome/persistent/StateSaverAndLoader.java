@@ -18,6 +18,11 @@ public class StateSaverAndLoader extends PersistentState {
         return nbt;
     }
 
+    private static Type<StateSaverAndLoader> type = new Type<>(
+            StateSaverAndLoader::new, // 若不存在 'StateSaverAndLoader' 则创建
+            StateSaverAndLoader::createFromNbt, // 若存在 'StateSaverAndLoader' NBT, 则调用 'createFromNbt' 传入参数
+            null // 此处理论上应为 'DataFixTypes' 的枚举，但我们直接传递为空(null)也可以
+    );
 
     private static StateSaverAndLoader createFromNbt(NbtCompound tag) {
         StateSaverAndLoader state = new StateSaverAndLoader();
@@ -25,13 +30,13 @@ public class StateSaverAndLoader extends PersistentState {
         return state;
     }
 
-    public static StateSaverAndLoader getServerState(MinecraftServer server,String playerName) {
+    public static StateSaverAndLoader getServerState(MinecraftServer server, String playerName) {
         // (注：如需在任意维度生效，请使用 'World.OVERWORLD' ，不要使用 'World.END' 或 'World.NETHER')
         PersistentStateManager persistentStateManager = Objects.requireNonNull(server.getWorld(World.OVERWORLD)).getPersistentStateManager();
 
         // 当第一次调用了方法 'getOrCreate' 后，它会创建新的 'StateSaverAndLoader' 并将其存储于  'PersistentStateManager' 中。
         //  'getOrCreate' 的后续调用将本地的 'StateSaverAndLoader' NBT 传递给 'StateSaverAndLoader::createFromNbt'。
-        StateSaverAndLoader state = persistentStateManager.getOrCreate(StateSaverAndLoader::createFromNbt,StateSaverAndLoader::new, playerName);
+        StateSaverAndLoader state = persistentStateManager.getOrCreate(type, playerName);
 
         // 若状态未标记为脏(dirty)，当 Minecraft 关闭时， 'writeNbt' 不会被调用，相应地，没有数据会被保存。
         // 从技术上讲，只有在事实上发生数据变更时才应当将状态标记为脏(dirty)。
