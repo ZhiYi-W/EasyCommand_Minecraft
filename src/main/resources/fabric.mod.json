@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "easycommand",
+  "id": "easysurvivalcommand",
   "version": "${version}",
   "name": "EasyCommand",
   "description": "一款添加了生存常用命令的mod",
